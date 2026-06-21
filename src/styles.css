@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family:
+      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+    background: #070a14;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  section {
+    scroll-margin-top: 112px;
+  }
+
+  ::selection {
+    background: #4f8cff;
+    color: #080b16;
+  }
+
+  :focus-visible {
+    outline: 3px solid #4f8cff;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .road-grid {
+    background-image:
+      linear-gradient(rgba(245, 248, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245, 248, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(135deg, transparent 0 48%, rgba(79, 140, 255, 0.13) 48% 51%, rgba(139, 92, 246, 0.08) 51% 53%, transparent 53% 100%);
+    background-position: center;
+    background-size:
+      48px 48px,
+      48px 48px,
+      220px 220px;
+    pointer-events: none;
+  }
+
+  .button-primary,
+  .button-secondary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-lg px-5 py-3 text-base font-black transition;
+  }
+
+  .button-primary {
+    @apply bg-signal text-rubber shadow-soft hover:-translate-y-0.5 hover:bg-[#72a4ff];
+  }
+
+  .button-secondary {
+    @apply border border-line bg-rubber text-ink hover:-translate-y-0.5 hover:border-warning/70 hover:bg-panel;
+  }
+
+  .nav-link {
+    @apply rounded-md px-3 py-2 text-sm font-bold text-muted transition hover:bg-panel hover:text-ink;
+  }
+
+  .legal-copy {
+    @apply text-muted;
+  }
+
+  .legal-copy h2 {
+    @apply mt-10 text-2xl font-black text-ink;
+  }
+
+  .legal-copy p {
+    @apply mt-3 leading-7;
+  }
+
+  .legal-copy ul,
+  .legal-copy ol {
+    @apply mt-4 space-y-2 pl-6 leading-7;
+  }
+
+  .legal-copy ul {
+    @apply list-disc;
+  }
+
+  .legal-copy ol {
+    @apply list-decimal;
+  }
+
+  .legal-copy a {
+    @apply font-bold text-ink underline decoration-signal decoration-2 underline-offset-4;
+  }
+}

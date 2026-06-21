@@ -1,0 +1,26 @@
+{
+  "name": "carcare-landing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "lucide-react": "^0.561.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "tailwindcss": "^3.4.19",
+    "postcss": "^8.5.6",
+    "autoprefixer": "^10.4.23",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.7"
+  }
+}
